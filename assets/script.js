@@ -113,20 +113,22 @@ function generatePassword() {
     password.push(randomCharacter(characters));
   }
 
+  password = password.join('');
+
   return password;
 }
 
 // Get references to the #generate element
-let generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
   let password = generatePassword();
-  let passwordText = document.querySelector("#password");
+  let passwordText = document.querySelector('#password');
 
   passwordText.value = password;
 
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener('click', writePassword);
